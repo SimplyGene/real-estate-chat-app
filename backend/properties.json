@@ -1,0 +1,962 @@
+[
+  {
+    "name": "Property Name",
+    "price": "7,113,506",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "1",
+    "bedrooms": 3,
+    "houseType": 3,
+    "features": 4,
+    "agent": "072470730",
+    "actions": "for sale and rent"
+  },
+  {
+    "name": "Property Name",
+    "price": "17,430,919",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "1",
+    "bedrooms": 1,
+    "houseType": 3,
+    "features": 4,
+    "agent": "072726757",
+    "actions": "for sale and rent"
+  },
+  {
+    "name": "Property Name",
+    "price": "25,835,472",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "3",
+    "bedrooms": 4,
+    "houseType": 3,
+    "features": 3,
+    "agent": "071153215",
+    "actions": "for sale and rent"
+  },
+  {
+    "name": "Property Name",
+    "price": "27,238,074",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "4",
+    "bedrooms": 3,
+    "houseType": 2,
+    "features": 3,
+    "agent": "071857946",
+    "actions": "for sale and rent"
+  },
+  {
+    "name": "Property Name",
+    "price": "5,972,471",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "4",
+    "bedrooms": 2,
+    "houseType": 1,
+    "features": 3,
+    "agent": "071129381",
+    "actions": "for rent"
+  },
+  {
+    "name": "Property Name",
+    "price": "21,997,970",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "3",
+    "bedrooms": 4,
+    "houseType": 1,
+    "features": 4,
+    "agent": "073978211",
+    "actions": "for rent"
+  },
+  {
+    "name": "Property Name",
+    "price": "21,202,082",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "3",
+    "bedrooms": 4,
+    "houseType": 2,
+    "features": 5,
+    "agent": "071667505",
+    "actions": "for rent"
+  },
+  {
+    "name": "Property Name",
+    "price": "26,569,618",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "3",
+    "bedrooms": 3,
+    "houseType": 1,
+    "features": 5,
+    "agent": "071261432",
+    "actions": "for sale"
+  },
+  {
+    "name": "Property Name",
+    "price": "11,596,548",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "3",
+    "bedrooms": 2,
+    "houseType": 2,
+    "features": 4,
+    "agent": "071087953",
+    "actions": "for rent"
+  },
+  {
+    "name": "Property Name",
+    "price": "19,154,170",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "4",
+    "bedrooms": 2,
+    "houseType": 3,
+    "features": 5,
+    "agent": "071149970",
+    "actions": "for sale"
+  },
+  {
+    "name": "Property Name",
+    "price": "7,740,818",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "3",
+    "bedrooms": 1,
+    "houseType": 1,
+    "features": 3,
+    "agent": "071594495",
+    "actions": "for sale and rent"
+  },
+  {
+    "name": "Property Name",
+    "price": "4,737,107",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "5",
+    "bedrooms": 2,
+    "houseType": 3,
+    "features": 3,
+    "agent": "072758453",
+    "actions": "for sale and rent"
+  },
+  {
+    "name": "Property Name",
+    "price": "23,295,276",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "2",
+    "bedrooms": 3,
+    "houseType": 2,
+    "features": 4,
+    "agent": "073818625",
+    "actions": "for rent"
+  },
+  {
+    "name": "Property Name",
+    "price": "26,365,101",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "3",
+    "bedrooms": 1,
+    "houseType": 2,
+    "features": 4,
+    "agent": "071927546",
+    "actions": "for sale and rent"
+  },
+  {
+    "name": "Property Name",
+    "price": "12,749,545",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "4",
+    "bedrooms": 2,
+    "houseType": 3,
+    "features": 3,
+    "agent": "071380806",
+    "actions": "for rent"
+  },
+  {
+    "name": "Property Name",
+    "price": "15,734,673",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "4",
+    "bedrooms": 1,
+    "houseType": 1,
+    "features": 5,
+    "agent": "071899482",
+    "actions": "for sale and rent"
+  },
+  {
+    "name": "Property Name",
+    "price": "11,155,760",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "4",
+    "bedrooms": 1,
+    "houseType": 3,
+    "features": 4,
+    "agent": "072237378",
+    "actions": "for sale and rent"
+  },
+  {
+    "name": "Property Name",
+    "price": "26,255,960",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "3",
+    "bedrooms": 3,
+    "houseType": 3,
+    "features": 3,
+    "agent": "071020753",
+    "actions": "for rent"
+  },
+  {
+    "name": "Property Name",
+    "price": "24,221,138",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "2",
+    "bedrooms": 1,
+    "houseType": 2,
+    "features": 4,
+    "agent": "071291891",
+    "actions": "for rent"
+  },
+  {
+    "name": "Property Name",
+    "price": "29,514,285",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "3",
+    "bedrooms": 1,
+    "houseType": 1,
+    "features": 3,
+    "agent": "073021915",
+    "actions": "for sale"
+  },
+  {
+    "name": "Property Name",
+    "price": "23,913,817",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "5",
+    "bedrooms": 2,
+    "houseType": 2,
+    "features": 3,
+    "agent": "071946101",
+    "actions": "for sale"
+  },
+  {
+    "name": "Property Name",
+    "price": "29,766,717",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "5",
+    "bedrooms": 4,
+    "houseType": 3,
+    "features": 5,
+    "agent": "072058852",
+    "actions": "for rent"
+  },
+  {
+    "name": "Property Name",
+    "price": "652,562",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "4",
+    "bedrooms": 1,
+    "houseType": 2,
+    "features": 4,
+    "agent": "073879552",
+    "actions": "for rent"
+  },
+  {
+    "name": "Property Name",
+    "price": "1,011,839",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "4",
+    "bedrooms": 2,
+    "houseType": 1,
+    "features": 5,
+    "agent": "072549905",
+    "actions": "for rent"
+  },
+  {
+    "name": "Property Name",
+    "price": "12,992,943",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "4",
+    "bedrooms": 4,
+    "houseType": 2,
+    "features": 4,
+    "agent": "071445135",
+    "actions": "for sale"
+  },
+  {
+    "name": "Property Name",
+    "price": "8,918,269",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "2",
+    "bedrooms": 2,
+    "houseType": 2,
+    "features": 3,
+    "agent": "072530392",
+    "actions": "for sale and rent"
+  },
+  {
+    "name": "Property Name",
+    "price": "20,913,135",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "1",
+    "bedrooms": 1,
+    "houseType": 3,
+    "features": 5,
+    "agent": "072799825",
+    "actions": "for rent"
+  },
+  {
+    "name": "Property Name",
+    "price": "1,968,508",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "5",
+    "bedrooms": 4,
+    "houseType": 3,
+    "features": 3,
+    "agent": "073859922",
+    "actions": "for sale"
+  },
+  {
+    "name": "Property Name",
+    "price": "7,705,062",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "2",
+    "bedrooms": 3,
+    "houseType": 2,
+    "features": 5,
+    "agent": "071504930",
+    "actions": "for sale"
+  },
+  {
+    "name": "Property Name",
+    "price": "13,810,653",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "2",
+    "bedrooms": 1,
+    "houseType": 2,
+    "features": 3,
+    "agent": "071100209",
+    "actions": "for sale"
+  },
+  {
+    "name": "Property Name",
+    "price": "11,897,167",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "5",
+    "bedrooms": 2,
+    "houseType": 1,
+    "features": 3,
+    "agent": "073964594",
+    "actions": "for sale"
+  },
+  {
+    "name": "Property Name",
+    "price": "27,198,745",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "3",
+    "bedrooms": 4,
+    "houseType": 3,
+    "features": 3,
+    "agent": "073813045",
+    "actions": "for rent"
+  },
+  {
+    "name": "Property Name",
+    "price": "24,962,195",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "5",
+    "bedrooms": 1,
+    "houseType": 2,
+    "features": 5,
+    "agent": "072650907",
+    "actions": "for sale and rent"
+  },
+  {
+    "name": "Property Name",
+    "price": "23,276,762",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "2",
+    "bedrooms": 2,
+    "houseType": 2,
+    "features": 5,
+    "agent": "071777216",
+    "actions": "for rent"
+  },
+  {
+    "name": "Property Name",
+    "price": "10,917,413",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "4",
+    "bedrooms": 1,
+    "houseType": 3,
+    "features": 5,
+    "agent": "072179764",
+    "actions": "for sale"
+  },
+  {
+    "name": "Property Name",
+    "price": "17,765,838",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "4",
+    "bedrooms": 1,
+    "houseType": 2,
+    "features": 5,
+    "agent": "071197526",
+    "actions": "for rent"
+  },
+  {
+    "name": "Property Name",
+    "price": "18,780,243",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "1",
+    "bedrooms": 1,
+    "houseType": 1,
+    "features": 5,
+    "agent": "072371831",
+    "actions": "for sale"
+  },
+  {
+    "name": "Property Name",
+    "price": "7,430,767",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "4",
+    "bedrooms": 4,
+    "houseType": 2,
+    "features": 3,
+    "agent": "071215831",
+    "actions": "for sale and rent"
+  },
+  {
+    "name": "Property Name",
+    "price": "24,935,288",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "5",
+    "bedrooms": 4,
+    "houseType": 1,
+    "features": 3,
+    "agent": "072937476",
+    "actions": "for sale and rent"
+  },
+  {
+    "name": "Property Name",
+    "price": "9,671,540",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "3",
+    "bedrooms": 1,
+    "houseType": 1,
+    "features": 3,
+    "agent": "073572884",
+    "actions": "for sale"
+  },
+  {
+    "name": "Property Name",
+    "price": "21,255,451",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "1",
+    "bedrooms": 4,
+    "houseType": 1,
+    "features": 4,
+    "agent": "072640737",
+    "actions": "for sale and rent"
+  },
+  {
+    "name": "Property Name",
+    "price": "15,187,582",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "2",
+    "bedrooms": 4,
+    "houseType": 2,
+    "features": 3,
+    "agent": "072329106",
+    "actions": "for sale and rent"
+  },
+  {
+    "name": "Property Name",
+    "price": "18,080,823",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "5",
+    "bedrooms": 1,
+    "houseType": 3,
+    "features": 4,
+    "agent": "073373101",
+    "actions": "for rent"
+  },
+  {
+    "name": "Property Name",
+    "price": "20,480,275",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "5",
+    "bedrooms": 1,
+    "houseType": 2,
+    "features": 3,
+    "agent": "073145430",
+    "actions": "for sale and rent"
+  },
+  {
+    "name": "Property Name",
+    "price": "2,717,294",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "2",
+    "bedrooms": 4,
+    "houseType": 3,
+    "features": 4,
+    "agent": "073234680",
+    "actions": "for rent"
+  },
+  {
+    "name": "Property Name",
+    "price": "11,601,900",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "3",
+    "bedrooms": 1,
+    "houseType": 1,
+    "features": 4,
+    "agent": "071256493",
+    "actions": "for sale and rent"
+  },
+  {
+    "name": "Property Name",
+    "price": "19,151,009",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "1",
+    "bedrooms": 4,
+    "houseType": 2,
+    "features": 4,
+    "agent": "072917702",
+    "actions": "for rent"
+  },
+  {
+    "name": "Property Name",
+    "price": "5,180,870",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "5",
+    "bedrooms": 2,
+    "houseType": 2,
+    "features": 3,
+    "agent": "073768320",
+    "actions": "for sale"
+  },
+  {
+    "name": "Property Name",
+    "price": "26,681,616",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "3",
+    "bedrooms": 2,
+    "houseType": 1,
+    "features": 4,
+    "agent": "073718716",
+    "actions": "for rent"
+  },
+  {
+    "name": "Property Name",
+    "price": "25,788,048",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "3",
+    "bedrooms": 3,
+    "houseType": 2,
+    "features": 3,
+    "agent": "071336423",
+    "actions": "for rent"
+  },
+  {
+    "name": "Property Name",
+    "price": "28,490,584",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "2",
+    "bedrooms": 4,
+    "houseType": 1,
+    "features": 5,
+    "agent": "073435844",
+    "actions": "for sale and rent"
+  },
+  {
+    "name": "Property Name",
+    "price": "28,532,340",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "5",
+    "bedrooms": 1,
+    "houseType": 2,
+    "features": 4,
+    "agent": "071860787",
+    "actions": "for sale and rent"
+  },
+  {
+    "name": "Property Name",
+    "price": "3,623,316",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "2",
+    "bedrooms": 4,
+    "houseType": 3,
+    "features": 5,
+    "agent": "073302024",
+    "actions": "for rent"
+  },
+  {
+    "name": "Property Name",
+    "price": "748,923",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "2",
+    "bedrooms": 2,
+    "houseType": 3,
+    "features": 4,
+    "agent": "072809441",
+    "actions": "for sale"
+  },
+  {
+    "name": "Property Name",
+    "price": "20,021,242",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "5",
+    "bedrooms": 2,
+    "houseType": 3,
+    "features": 5,
+    "agent": "071601594",
+    "actions": "for sale and rent"
+  },
+  {
+    "name": "Property Name",
+    "price": "28,808,311",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "2",
+    "bedrooms": 3,
+    "houseType": 1,
+    "features": 4,
+    "agent": "072515755",
+    "actions": "for rent"
+  },
+  {
+    "name": "Property Name",
+    "price": "1,955,073",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "5",
+    "bedrooms": 4,
+    "houseType": 2,
+    "features": 4,
+    "agent": "072804879",
+    "actions": "for sale"
+  },
+  {
+    "name": "Property Name",
+    "price": "3,217,706",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "3",
+    "bedrooms": 3,
+    "houseType": 3,
+    "features": 5,
+    "agent": "073312970",
+    "actions": "for sale"
+  },
+  {
+    "name": "Property Name",
+    "price": "3,279,484",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "4",
+    "bedrooms": 2,
+    "houseType": 1,
+    "features": 4,
+    "agent": "072611325",
+    "actions": "for sale and rent"
+  },
+  {
+    "name": "Property Name",
+    "price": "7,798,735",
+    "description": "Description of the property.",
+    "images": [
+      "image1.jpg",
+      "image2.jpg",
+      "image3.jpg"
+    ],
+    "location": "3",
+    "bedrooms": 3,
+    "houseType": 1,
+    "features": 4,
+    "agent": "072043407",
+    "actions": "for rent"
+  }
+]
