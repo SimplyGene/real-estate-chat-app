@@ -15,7 +15,7 @@ export const Property = mongoose.model("Property", {
   actions: String,
 });
 
-mongoose.connect("mongodb://localhost:27017/realty", {
+mongoose.connect("mongodb+srv://amschel:i2SgpeVqFSpPGljD@cluster0.z5dsdnf.mongodb.net", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
