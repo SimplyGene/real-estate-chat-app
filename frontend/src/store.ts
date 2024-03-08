@@ -15,6 +15,7 @@ export type Message = {
   options: Option;
   id: string;
   list?: boolean;
+  conclusion?: string;
 };
 export type Steps = {
   step: number;

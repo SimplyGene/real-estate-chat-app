@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-
 import io from "socket.io-client";
 import Chat from "./components/Chat";
 import {
@@ -19,9 +18,9 @@ function App() {
 
   const updateMessages = (data: Message) => {
     const newData = [data];
-
     setMessages(newData);
   };
+
   useEffect(() => {
     socket.on("connect", () => {
       console.log("Connected to server");
@@ -52,16 +51,21 @@ function App() {
     socket.on(Events.COMMERCIALPRICERANGE, (data) => {
       setMessages([data]);
     });
+    socket.on(Events.AVAILABLECOMMERCIAL, updateMessages);
   }, []);
-  socket.on(Events.AVAILABLECOMMERCIAL, updateMessages);
 
   return (
     <div
       style={{
         height: "100vh",
+        width: "100vw",
         display: "flex",
         flexDirection: "row",
         justifyContent: "center",
+        backgroundImage:
+          'url("https://cdn.pixabay.com/photo/2014/08/03/23/41/house-409451_640.jpg")',
+        backgroundSize: "cover",
+        backgroundPosition: "center",
       }}
     >
       <Chat />

@@ -115,7 +115,7 @@ io.on("connection", (socket) => {
 
   socket.on("getcommercialPrice", () => {
     socket.emit("getcommercialPrice", {
-      message: "Interesting! What's your budget?",
+      message: "Interesting! What's your maximum budget?",
     });
   });
 
@@ -140,7 +140,11 @@ io.on("connection", (socket) => {
       location: data.location,
       houseType: data.houseType,
       bedrooms: data.bedrooms,
+      price: {
+        $lte: data.price + 1000000,
+      },
     };
+
     console.log(filters);
     const properties = await Property.find(filters);
     console.log(`properties length:${properties.length}`);
@@ -156,6 +160,8 @@ io.on("connection", (socket) => {
       options: {},
       id: uuidv4(),
       list: true,
+      conclusion:
+        "  Please contact the agent for more details! Thank you for using Chatter Estate.",
     };
 
     properties.forEach((property, index) => {

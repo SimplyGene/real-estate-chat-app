@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "../styles/index.css";
 import { useIsFirstTime, IsFirstTime, UseChat, useChats } from "../store";
 import { socket } from "../App";
 import { Events } from "./events";
 import { getLocationString, getTypeString, getFeatures } from "../utils";
+
 import house1 from "./house1.jpg";
 import house2 from "./house2.jpeg";
 import house3 from "./house3.jpeg";
@@ -57,6 +58,7 @@ const Chat: React.FC = () => {
   const [location, setLocation] = useState<string | null>(null);
   const [houseType, setHouseType] = useState<number | null>(null);
   const [actionType, setActionType] = useState<number | null>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const [value, setValue] = useState("");
   const { isFirstTime, setIsFirstTime } = useIsFirstTime(
@@ -70,13 +72,162 @@ const Chat: React.FC = () => {
     if (isFirstTime) {
       localStorage.setItem("step", "1");
 
-      socket.emit("initConvo");
+      return socket.emit("initConvo");
+    }
+    if (localStorage.getItem("step") == "1") {
+      //Buy home
+
+      if (inputRef.current?.value === "1") {
+        localStorage.setItem("step", "11");
+        setActionType(1);
+
+        return socket.emit(Events.BUYHOME);
+      }
+      if (inputRef.current?.value === "2") {
+        localStorage.setItem("step", "11");
+        setActionType(2);
+
+        return socket.emit(Events.BUYHOME);
+      }
+      if (inputRef.current?.value === "3") {
+        localStorage.setItem("step", "11");
+        setActionType(3);
+
+        return socket.emit(Events.BUYHOME);
+      }
+      //other options
+      return;
     }
 
     if (localStorage.getItem("step") == "1111") {
       setPrice(value);
       localStorage.setItem("step", "11111");
       return socket.emit(Events.COMMERCIALPRICERANGE, value);
+    }
+    if (localStorage.getItem("step") == "11") {
+      if (inputRef.current?.value === "1") {
+        localStorage.setItem("step", "111");
+        setHouseType(1);
+
+        return socket.emit(Events.BUYCOMMERCIAL);
+      }
+      if (inputRef.current?.value === "2") {
+        localStorage.setItem("step", "111");
+        setHouseType(2);
+
+        return socket.emit(Events.BUYCOMMERCIAL);
+      }
+      if (inputRef.current?.value === "3") {
+        localStorage.setItem("step", "111");
+        setHouseType(3);
+
+        return socket.emit(Events.BUYCOMMERCIAL);
+      }
+
+      //other options
+      return;
+    }
+
+    if (localStorage.getItem("step") == "111") {
+      if (inputRef.current?.value === "1") {
+        localStorage.setItem("step", "1111");
+        setLocation("1");
+        return socket.emit(Events.GETCOMMERCIALPRICE);
+      }
+      if (inputRef.current?.value === "2") {
+        localStorage.setItem("step", "1111");
+        setLocation("2");
+        return socket.emit(Events.GETCOMMERCIALPRICE);
+      }
+      if (inputRef.current?.value === "3") {
+        localStorage.setItem("step", "1111");
+        setLocation("3");
+        return socket.emit(Events.GETCOMMERCIALPRICE);
+      }
+      if (inputRef.current?.value === "4") {
+        localStorage.setItem("step", "1111");
+        setLocation("4");
+        return socket.emit(Events.GETCOMMERCIALPRICE);
+      }
+      if (inputRef.current?.value === "5") {
+        localStorage.setItem("step", "1111");
+        setLocation("5");
+        return socket.emit(Events.GETCOMMERCIALPRICE);
+      }
+      return;
+    }
+    if (localStorage.getItem("step") == "111") {
+      if (inputRef.current?.value === "1") {
+        localStorage.setItem("step", "1111");
+        setLocation("1");
+        return socket.emit(Events.GETCOMMERCIALPRICE);
+      }
+      if (inputRef.current?.value === "2") {
+        localStorage.setItem("step", "1111");
+        setLocation("2");
+        return socket.emit(Events.GETCOMMERCIALPRICE);
+      }
+      if (inputRef.current?.value === "3") {
+        localStorage.setItem("step", "1111");
+        setLocation("3");
+        return socket.emit(Events.GETCOMMERCIALPRICE);
+      }
+      if (inputRef.current?.value === "4") {
+        localStorage.setItem("step", "1111");
+        setLocation("4");
+        return socket.emit(Events.GETCOMMERCIALPRICE);
+      }
+      if (inputRef.current?.value === "5") {
+        localStorage.setItem("step", "1111");
+        setLocation("5");
+        return socket.emit(Events.GETCOMMERCIALPRICE);
+      }
+      return;
+    }
+    if (localStorage.getItem("step") == "11111") {
+      if (inputRef.current?.value == "1") {
+        localStorage.setItem("step", "1111");
+
+        return socket.emit(Events.AVAILABLECOMMERCIAL, {
+          price,
+          bedrooms: 1,
+          location,
+          houseType,
+          actionType,
+        });
+      }
+      if (inputRef.current?.value == "2") {
+        localStorage.setItem("step", "1111");
+
+        return socket.emit(Events.AVAILABLECOMMERCIAL, {
+          price,
+          bedrooms: 2,
+          location,
+          houseType,
+          actionType,
+        });
+      }
+      if (inputRef.current?.value == "3") {
+        localStorage.setItem("step", "1111");
+
+        return socket.emit(Events.AVAILABLECOMMERCIAL, {
+          price,
+          bedrooms: 3,
+          location,
+          houseType,
+          actionType,
+        });
+      }
+      if (inputRef.current?.value == "4") {
+        localStorage.setItem("step", "1111");
+        //remember to add price
+        return socket.emit(Events.AVAILABLECOMMERCIAL, {
+          bedrooms: 4,
+          location: location?.toString(),
+          houseType,
+          actionType,
+        });
+      }
     }
   };
   React.useEffect(() => {
@@ -86,6 +237,26 @@ const Chat: React.FC = () => {
   return (
     <div className="chat-container">
       <div className="chat-messages">
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-evenly",
+            alignItems: "center",
+          }}
+        >
+          <img width="50" height="50" src="./public/logo.png"></img>
+          <h1
+            style={{
+              textAlign: "center",
+              marginBottom: "20px",
+              marginRight: "50px",
+            }}
+          >
+            Chatter Estate
+          </h1>
+        </div>
+
         {messages.map((message, index) => (
           <div key={index} className="message">
             {typeof message === "object" ? (
@@ -149,6 +320,8 @@ const Chat: React.FC = () => {
                         </div>
                       );
                     })}
+
+                    <p>{message?.conclusion}</p>
                   </div>
                 )}
               </>
@@ -159,134 +332,19 @@ const Chat: React.FC = () => {
         ))}
       </div>
 
-      <div className="chat-input">
+      <div
+        className="chat-input"
+        style={{
+          top: "10000px",
+        }}
+      >
         <input
+          ref={inputRef}
           type="text"
           value={value}
           onChange={(e) => {
             console.log(localStorage.getItem("step") + "itss");
             setValue(e.target.value);
-
-            if (localStorage.getItem("step") == "1") {
-              //Buy home
-
-              if (e.target.value === "1") {
-                localStorage.setItem("step", "11");
-                setActionType(1);
-
-                return socket.emit(Events.BUYHOME);
-              }
-              if (e.target.value === "2") {
-                localStorage.setItem("step", "11");
-                setActionType(2);
-
-                return socket.emit(Events.BUYHOME);
-              }
-              if (e.target.value === "3") {
-                localStorage.setItem("step", "11");
-                setActionType(3);
-
-                return socket.emit(Events.BUYHOME);
-              }
-              //other options
-              return;
-            }
-            if (localStorage.getItem("step") == "11") {
-              if (e.target.value === "1") {
-                localStorage.setItem("step", "111");
-                setHouseType(1);
-
-                return socket.emit(Events.BUYCOMMERCIAL);
-              }
-              if (e.target.value === "2") {
-                localStorage.setItem("step", "111");
-                setHouseType(2);
-
-                return socket.emit(Events.BUYCOMMERCIAL);
-              }
-              if (e.target.value === "3") {
-                localStorage.setItem("step", "111");
-                setHouseType(3);
-
-                return socket.emit(Events.BUYCOMMERCIAL);
-              }
-
-              //other options
-              return;
-            }
-            if (localStorage.getItem("step") == "111") {
-              if (e.target.value === "1") {
-                localStorage.setItem("step", "1111");
-                setLocation("1");
-                return socket.emit(Events.GETCOMMERCIALPRICE);
-              }
-              if (e.target.value === "2") {
-                localStorage.setItem("step", "1111");
-                setLocation("2");
-                return socket.emit(Events.GETCOMMERCIALPRICE);
-              }
-              if (e.target.value === "3") {
-                localStorage.setItem("step", "1111");
-                setLocation("3");
-                return socket.emit(Events.GETCOMMERCIALPRICE);
-              }
-              if (e.target.value === "4") {
-                localStorage.setItem("step", "1111");
-                setLocation("4");
-                return socket.emit(Events.GETCOMMERCIALPRICE);
-              }
-              if (e.target.value === "5") {
-                localStorage.setItem("step", "1111");
-                setLocation("5");
-                return socket.emit(Events.GETCOMMERCIALPRICE);
-              }
-              return;
-            }
-            if (localStorage.getItem("step") == "11111") {
-              if (e.target.value == "1") {
-                localStorage.setItem("step", "1111");
-
-                return socket.emit(Events.AVAILABLECOMMERCIAL, {
-                  price,
-                  bedrooms: 1,
-                  location,
-                  houseType,
-                  actionType,
-                });
-              }
-              if (e.target.value == "2") {
-                localStorage.setItem("step", "1111");
-
-                return socket.emit(Events.AVAILABLECOMMERCIAL, {
-                  price,
-                  bedrooms: 2,
-                  location,
-                  houseType,
-                  actionType,
-                });
-              }
-              if (e.target.value == "3") {
-                localStorage.setItem("step", "1111");
-
-                return socket.emit(Events.AVAILABLECOMMERCIAL, {
-                  price,
-                  bedrooms: 3,
-                  location,
-                  houseType,
-                  actionType,
-                });
-              }
-              if (e.target.value == "4") {
-                localStorage.setItem("step", "1111");
-                //remember to add price
-                return socket.emit(Events.AVAILABLECOMMERCIAL, {
-                  bedrooms: 4,
-                  location: location?.toString(),
-                  houseType,
-                  actionType,
-                });
-              }
-            }
           }}
           placeholder="Type a message..."
         />
@@ -294,7 +352,9 @@ const Chat: React.FC = () => {
         <button
           onClick={() => {
             clearMessages();
-            localStorage.setItem("step", "1");
+            setIsFirstTime(true);
+
+            localStorage.setItem("step", "");
           }}
         >
           Reset chat
