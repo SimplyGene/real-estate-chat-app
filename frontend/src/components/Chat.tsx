@@ -276,7 +276,9 @@ const Chat: React.FC = () => {
                 {message.options && message.list && (
                   <div className="property-options">
                     {Object.keys(message.options).map((key) => {
-                      const option = JSON.parse(message.options[key]);
+                      const option = JSON.parse(
+                        message.options[key as unknown as number]
+                      );
                       const location = getLocationString(option.location);
                       const type = getTypeString(option.houseType);
                       const features = getFeatures(option.features);

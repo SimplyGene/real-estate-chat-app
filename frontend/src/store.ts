@@ -10,19 +10,32 @@ interface Option {
   [index: number]: string;
 }
 
-export type Message = {
+export interface Message {
   message: string;
   options: Option;
-  id: string;
+  id?: string;
   list?: boolean;
   conclusion?: string;
-};
+}
+function isMessage(message: unknown): message is Message {
+  return (
+    typeof message === "object" &&
+    "message" in message &&
+    typeof message.message === "string" &&
+    "options" in message &&
+    message.options instanceof Option && // Assuming Option is also an interface/type
+    ("id" in message ? typeof message.id === "string" : true) && // Optional id check
+    ("list" in message ? typeof message.list === "boolean" : true) && // Optional list check
+    ("conclusion" in message ? typeof message.conclusion === "string" : true)
+  ); // Optional conclusion check
+}
+
 export type Steps = {
   step: number;
   setStep: (step: number) => void;
 };
 export type UseChat = {
-  messages: Array<string | Message>;
+  messages: Array<string | Message | unknown>;
   setMessages: (messages: Array<string | Message>) => void;
   clearMessages: () => void;
 };
@@ -48,7 +61,11 @@ export const useChats = create<UseChat>((set) => ({
     set((state) => {
       const messagesWithId = messagesData.filter((message) => {
         if (typeof message === "object") {
-          return state.messages.some((item) => item?.id === message.id);
+          return state.messages.some((item) => {
+            return (
+              isMessage(item) && (item?.id as unknown as string) === message.id
+            );
+          });
         }
         if (typeof message === "string") {
           return state.messages.some((item) => item === message);
