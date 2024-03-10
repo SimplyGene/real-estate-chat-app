@@ -9,8 +9,9 @@ import {
   useIsFirstTime,
 } from "./store";
 import { Events } from "./components/events";
+import { isMessage } from "./store";
 
-export const socket = io(`http://localhost:5000`);
+export const socket = io(`https://real-estate-chat-app.onrender.com`);
 
 function App() {
   const { messages, setMessages } = useChats((state: UseChat) => state);
@@ -32,7 +33,7 @@ function App() {
 
     socket.on("initConvo", (data) => {
       const messagesWithId = messages.filter((message) => {
-        if (typeof message === "object") {
+        if (isMessage(message)) {
           message.id == data.id;
         }
       });
