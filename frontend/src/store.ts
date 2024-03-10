@@ -17,7 +17,7 @@ export interface Message {
   list?: boolean;
   conclusion?: string;
 }
-function isMessage(message: unknown): message is Message {
+export function isMessage(message: unknown): message is Message {
   return (
     typeof message === "object" &&
     "message" in message &&
@@ -35,7 +35,7 @@ export type Steps = {
   setStep: (step: number) => void;
 };
 export type UseChat = {
-  messages: Array<string | Message | unknown>;
+  messages: Array<string | Message>;
   setMessages: (messages: Array<string | Message>) => void;
   clearMessages: () => void;
 };

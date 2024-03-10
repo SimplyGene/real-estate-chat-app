@@ -4,6 +4,7 @@ import { useIsFirstTime, IsFirstTime, UseChat, useChats } from "../store";
 import { socket } from "../App";
 import { Events } from "./events";
 import { getLocationString, getTypeString, getFeatures } from "../utils";
+import { isMessage } from "../store";
 
 import house1 from "./house1.jpg";
 import house2 from "./house2.jpeg";
@@ -259,7 +260,7 @@ const Chat: React.FC = () => {
 
         {messages.map((message, index) => (
           <div key={index} className="message">
-            {typeof message === "object" ? (
+            {isMessage(message) ? (
               <>
                 {message.message}
                 {message.options && !message.list && (
