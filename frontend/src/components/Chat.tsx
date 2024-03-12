@@ -245,7 +245,7 @@ const Chat: React.FC = () => {
             alignItems: "center",
           }}
         >
-          <img width="50" height="50" src="./public/logo.png"></img>
+          <img width="50" height="50" src="./logo.png"></img>
           <h1
             style={{
               textAlign: "center",
