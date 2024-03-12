@@ -4,7 +4,6 @@ import { useIsFirstTime, IsFirstTime, UseChat, useChats } from "../store";
 import { socket } from "../App";
 import { Events } from "./events";
 import { getLocationString, getTypeString, getFeatures } from "../utils";
-import { isMessage } from "../store";
 
 import house1 from "./house1.jpg";
 import house2 from "./house2.jpeg";
@@ -260,7 +259,7 @@ const Chat: React.FC = () => {
 
         {messages.map((message, index) => (
           <div key={index} className="message">
-            {isMessage(message) ? (
+            {typeof message === "object" ? (
               <>
                 {message.message}
                 {message.options && !message.list && (
@@ -277,9 +276,7 @@ const Chat: React.FC = () => {
                 {message.options && message.list && (
                   <div className="property-options">
                     {Object.keys(message.options).map((key) => {
-                      const option = JSON.parse(
-                        message.options[key as unknown as number]
-                      );
+                      const option = JSON.parse(message.options[key]);
                       const location = getLocationString(option.location);
                       const type = getTypeString(option.houseType);
                       const features = getFeatures(option.features);
