@@ -71,8 +71,10 @@ const Chat: React.FC = () => {
 
     if (isFirstTime) {
       localStorage.setItem("step", "1");
-
-      return socket.emit("initConvo");
+if(inputRef.current?.value==="1"){
+     return socket.emit("initConvo");
+}
+   
     }
     if (localStorage.getItem("step") == "1") {
       //Buy home
