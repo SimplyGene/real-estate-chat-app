@@ -10,13 +10,14 @@ interface Option {
   [index: number]: string;
 }
 
-export interface Message {
+export type Message = {
   message: string;
   options: Option;
-  id?: string;
+  id: string;
   list?: boolean;
   conclusion?: string;
-}
+};
+
 export function isMessage(message: unknown): message is Message {
   return (
     typeof message === "object" &&
@@ -61,11 +62,8 @@ export const useChats = create<UseChat>((set) => ({
     set((state) => {
       const messagesWithId = messagesData.filter((message) => {
         if (typeof message === "object") {
-          return state.messages.some((item) => {
-            return (
-              isMessage(item) && (item?.id as unknown as string) === message.id
-            );
-          });
+          // @ts-ignore
+          return state.messages.some((item) => item?.id === message.id);
         }
         if (typeof message === "string") {
           return state.messages.some((item) => item === message);
