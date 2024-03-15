@@ -1,10 +1,16 @@
 import React, { useState, useRef } from "react";
 import "../styles/index.css";
-import { useIsFirstTime, IsFirstTime, UseChat, useChats } from "../store";
+import {
+  useIsFirstTime,
+  IsFirstTime,
+  UseChat,
+  useChats,
+  Message,
+} from "../store";
 import { socket } from "../App";
 import { Events } from "./events";
 import { getLocationString, getTypeString, getFeatures } from "../utils";
-
+import PDFGenerator from "./Pdf";
 import house1 from "./house1.jpg";
 import house2 from "./house2.jpeg";
 import house3 from "./house3.jpeg";
@@ -59,7 +65,7 @@ const Chat: React.FC = () => {
   const [houseType, setHouseType] = useState<number | null>(null);
   const [actionType, setActionType] = useState<number | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
-
+  const [apartments, setApartments] = useState<Message | null>(null);
   const [value, setValue] = useState("");
   const { isFirstTime, setIsFirstTime } = useIsFirstTime(
     (state: IsFirstTime) => state
@@ -72,9 +78,7 @@ const Chat: React.FC = () => {
     if (isFirstTime) {
       localStorage.setItem("step", "1");
 
-     return socket.emit("initConvo");
-
-   
+      return socket.emit("initConvo");
     }
     if (localStorage.getItem("step") == "1") {
       //Buy home
@@ -85,8 +89,7 @@ const Chat: React.FC = () => {
 
         return socket.emit(Events.BUYHOME);
       }
-   
-    
+
       //other options
       return;
     }
@@ -225,6 +228,11 @@ const Chat: React.FC = () => {
   React.useEffect(() => {
     localStorage.setItem("step", "0");
     setIsFirstTime(true);
+    socket.on(Events.AVAILABLECOMMERCIAL, (data) => {
+      if (typeof data === "object") {
+        setApartments(data.options);
+      }
+    });
   }, []);
   return (
     <div className="chat-container">
@@ -341,6 +349,8 @@ const Chat: React.FC = () => {
           placeholder="Type a message..."
         />
         <button onClick={handleSend}>Send</button>
+        {apartments && <PDFGenerator options={apartments} />}
+
         <button
           onClick={() => {
             clearMessages();
